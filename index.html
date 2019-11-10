@@ -1,25 +1,92 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>metropool</title>
-<link rel="stylesheet" type="text/css" href="home.css">
+	<title>Swipe screen</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	 <link rel="stylesheet" type="text/css" href="swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<div class="container">
-<div class="menu">
-<ul>
-<li>Home</li>
-<li><a href="booking.html"><span>Booking</span></a></li>
-<li><a href="signin.html"class="signup-btn"><span>Sign in</span></a></li>
-<li><a href="login.html"class="Login-btn"><span>Login</span></a></li>
-</ul>
-</div>
-<div class="banner">
-<div class="app-text">
-<h1>HEY GUYS!! <br>Here's the BMSCE Metro-Auto Pool...</h1>
-</div>
+	<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" >
+      	<div class="imgBx">
+      		<img src="images1.jpg" width="300" height="300">
+      	</div>
+      	<div class="details">
+      		<h3>Sir.Lazy<br><span>BMSCE</span></h3>
+      	</div>
+      </div>
 
-</div>
+      <div class="swiper-slide" >
+      	<div class="imgBx">
+      		<img src="images2.jpg" width="300" height="300">
+      	</div>
+      	<div class="details">
+      		<h3>Sir.Lazy<br><span>BMSCE</span></h3>
+      	</div>
+      </div>
+
+      <div class="swiper-slide" >
+      	<div class="imgBx">
+      		<img src="images3.jpg" width="300" height="300">
+      	</div>
+      	<div class="details">
+      		<h3>Sir.Lazy<br><span>BMSCE</span></h3>
+      	</div>
+      </div>
+
+      <div class="swiper-slide" >
+      	<div class="imgBx">
+      		<img src="images4.jpg" width="300" height="300">
+      	</div>
+      	<div class="details">
+      		<h3>Sir.Lazy<br><span>BMSCE</span></h3>
+      	</div>
+      </div>
+
+      <div class="swiper-slide" >
+      	<div class="imgBx">
+      		<img src="images5.jpg" width="300" height="300">
+      	</div>
+      	<div class="details">
+      		<h3>Sir.Lazy<br><span>BMSCE</span></h3>
+      	</div>
+      </div>
+
+      <div class="swiper-slide" >
+      	<div class="imgBx">
+      		<img src="images6.jpg" width="300" height="300">
+      	</div>
+      	<div class="details">
+      		<h3>Sir.Lazy<br><span>BMSCE</span></h3>
+      	</div>
+      </div>
+      
+      
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+	<script type="text/javascript" src="swiper.min.js"></script>
+	 <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  </script>
+
 </body>
 </html>
-
-
