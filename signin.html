@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Sign up form</title>
+<script type="text/javascript">
+function validate()
+{
+ var username=document.getElementById("username");
+ var mobileno=document.getElementById("mobileno");
+ var email=document.getElementById("email");
+ var password=document.getElementById("password");
+ var confirmpassword=document.getElementById("confirmpassword");
+
+
+ if (username.value.trim() =="" )
+ {
+  username.style.border="solid 2px red";
+  document.getElementById("uname").style.visibility="visible";
+  return false;
+ }
+else if (mobileno.value.trim()=="" )
+ { 
+  mobileno.style.border="solid 2px red";
+  document.getElementById("mobile").style.visibility="visible";
+  return false;
+ }
+else if (mobileno.value.length!=10 )
+ {
+  mobileno.style.border="solid 2px red";
+  document.getElementById("mobile1").style.visibility="visible";
+  return false;
+ }
+else if (email.value.trim()=="" )
+ {
+  email.style.border="solid 2px red";
+  document.getElementById("mail").style.visibility="visible";
+  return false;
+ }
+else if (password.value.trim()=="" )
+ {
+  password.style.border="solid 2px red";
+  document.getElementById("pword").style.visibility="visible";
+  password.focus();
+  return false;
+ }
+else if (password.value.trim().length<4 )
+ {
+  password.style.border="solid 2px red";
+  document.getElementById("pword1").style.visibility="visible";
+  password.focus();
+  return false;
+ }
+else if (confirmpassword.value.trim()=="")
+ {
+  confirmpassword.style.border="solid 2px red";
+  document.getElementById("cp").style.visibility="visible";
+  password.focus();
+  return false;
+ }
+else
+{
+ return true;
+}
+
+}
+
+</script>
+<style>
+body{
+background-image:url("123.jpg");
+background-size: cover;
+}
+</style>
+<body>
+<link rel="stylesheet" type="text/css" href="signin.css">
+<div class="signinbox">
+
+<img src="logo.jpg" class="logo">
+<h1>Sign up</h1>
+<form onsubmit="return validate()" action="msg.html">
+<p>Username</p>
+<input type="text" id="username" placeholder=" Enter Username"><br>
+<label id="uname" style="color: red; visibility: hidden;"> *Username cannot be blank</label>
+
+<p>Mobile no.</p>
+<input type="number" id="mobileno" placeholder="Enter your Mobile Number"/><br>
+<label id="mobile" style="color: red; visibility: hidden;"> *Mobile number cannot be blank</label><br>
+<label id="mobile1" style="color: red; visibility: hidden;"> *Invalid mobile number</label>
+
+<p>Email I'd</p>
+<input type="email" id="email" placeholder="Enter your BMSCE mail I'd"><br>
+<label id="mail" style="color: red; visibility: hidden;"> *Enter your Email I'd</label>
+<p>Gender</p>
+
+Female:<input type="radio"name="gender"id="gender"value="Female"> 
+Male: &nbsp&nbsp<input type="radio"name="gender"id="gender"value="Male"><br>
+
+<p>Password</p>
+<input type="Password" id="password" placeholder=" Enter Password"><br>
+<label id="pword" style="color: red; visibility: hidden;"> *Password cannot be blank</label><br>
+<label id="pword1" style="color: red; visibility: hidden;"> *Password must contain atleast 4 characters</label>
+
+<p>Confirm Password</p>
+<input type="Password" id="confirmpassword" placeholder="Confirm your Password"><br>
+<label id="cp" style="color: red; visibility: hidden;"> *Confirm password</label>
+
+<br><input type="submit" id="" value="Create account"><br><br>
+<a href="#">Already have an account?</a>
+</form>
+</div>
+</body>
+</head>
+</html>

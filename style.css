@@ -1,0 +1,21 @@
+body{
+	background: #262626;
+	margin:  0px;
+	padding: 0px;
+	color: #000;
+	font-size: 14px;
+
+}
+.swiper-container{
+	width: 100%;
+	padding-top: 50%;
+	padding-bottom: 50%;
+}
+.swiper-slide{
+	background-position: center;
+	background-size: cover;
+	height: 300px;
+	width: 300px;
+	background: #fff;
+
+}
