@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="chatBox">
-      <div class="chatLog">
+      <div class="chatLog" onclick="myFn()">
         <div class="chatU">
           <div class="profilePic"><img src="pp1.jpg" /></div>
           <div class="chatMessage">
@@ -23,11 +23,31 @@
             </p>
           </div>
         </div>
+
+        <div class="chatU">
+          <div class="profilePic"><img src="pp1.jpg" /></div>
+          
+        </div>
       </div>
       <div class="chatForm">
-        <textarea></textarea>
-        <button>send</button>
+        <textarea id="text"></textarea>
+        <button id="sendbtn" onclick="myfn()">send</button>
       </div>
     </div>
+    <script>
+
+      var send=document.getElementById("sendbtn");
+      var chatLog=document.querySelector(".chatLog");
+      
+
+      function myfn()
+      { var x=document.querySelector("#text").value;
+        chatLog.innerHTML+="<p>hello</p>";
+
+        
+
+      }
+
+    </script>
   </body>
 </html>
